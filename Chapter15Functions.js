@@ -17,6 +17,8 @@ console.log('-----Three roles of a function------')
        }
    }
    obj2.methods();//hello
+
+
 console.log('-----Hoisting-----');
  //Function Expression;
 //  func3(); //not a function error
@@ -27,9 +29,13 @@ console.log('-----Hoisting-----');
   function func4(){
       console.log('function declaration')
   }
+
+
 console.log('-----Name of a function-----')
  var x = function func5(){};
  console.log(x.name);//func5
+
+
 console.log('-----Handling missing and extra parameters------')
   function func6(mandatory,optional){
       if(mandatory == undefined){
@@ -44,13 +50,17 @@ console.log('-----Handling missing and extra parameters------')
   }
   func6();
   func6(1,2);
-console.log('------Simulating pass by reference');
+
+
+console.log('------Simulating pass by reference-------');
   function func7(param){
       return param[0]++
   }
   var t = [3];
   func7(t);
   console.log(t[0]);//4
+
+  
 console.log('-----Simulating named parameters-----');
   function func8(options){
       var start = options.start || 0;
