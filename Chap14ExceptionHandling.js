@@ -35,7 +35,7 @@ function throwFinallyException(){
     }
 }
 throwFinallyException();//Error
-console.log('-------------Try finally with return in try-----------------');
+console.log('-------------Finally with return in try-----------------');
 function idLog(x) {
     try {
         return x;
@@ -45,6 +45,18 @@ function idLog(x) {
     }
 }
 console.log(idLog(20));//21 20
+//------------------------
+console.log('------------Error Constructors--------------')
+const t = 10;
+function errorConstructor(){
+    try{
+        t = 12;
+    }catch(e){
+        console.log(e.message,e.name);//Assignment to constant variable   Type Error
+    }
+}
+errorConstructor();
+//------------------------
 console.log('---------Stack Trace----------');
 function stackTrace(){
     try{
