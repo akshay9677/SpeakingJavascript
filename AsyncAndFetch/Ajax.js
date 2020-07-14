@@ -1,3 +1,4 @@
+//-------GET REQUEST------
 var fetching = async function () {
   //GET Request using AJAX
   var http = new XMLHttpRequest();
@@ -22,7 +23,7 @@ var fetching = async function () {
   });
 };
 
-//POST Requests
+//-------POST REQUEST------
 var sendData = async function () {
   //   POST Request using Fetch
   fetch("https://jsonplaceholder.typicode.com/posts", {
@@ -62,7 +63,7 @@ var sendData = async function () {
   alert("Data send");
 };
 
-//PUT Request
+//-------PUT REQUEST------
 var updateData = async function () {
   //PUT Request using Fetch API
   fetch("https://jsonplaceholder.typicode.com/posts/1", {
@@ -101,7 +102,7 @@ var updateData = async function () {
   );
 };
 
-//DELETE Request
+//-------DELETE REQUEST------
 var deleteData = async function () {
   //DELETE Request using Fetch API
   fetch("https://jsonplaceholder.typicode.com/posts/1", {
