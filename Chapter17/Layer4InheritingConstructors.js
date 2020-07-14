@@ -34,5 +34,3 @@ counter.prototype.inc = function (step) {
 };
 var age = { count: 22 };
 counter.prototype.inc.call(age, 1); //23
-
-//
