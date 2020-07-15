@@ -132,11 +132,17 @@ var obj = {
       //DELETE Request using Fetch API
       fetch("https://jsonplaceholder.typicode.com/posts/1", {
         method: "DELETE",
-      }).then(() => true);
+      }).then(() => {
+        console.log("Deleted");
+        return true;
+      });
     },
   },
 };
 
-//DELETE Request
+//DELETE Request alert
+function deleteAlert() {
+  obj.deleteRequest.deleteFetch().then(() => alert("Data Deleted"));
+}
 
 module.exports = obj;

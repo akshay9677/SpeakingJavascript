@@ -1,5 +1,5 @@
-const obj = require("./Ajax");
-describe("Test cases for CRUD Operations using Fetch API", () => {
+const obj = require("./App");
+describe("Test cases for CRUD Operations using Fetch API and AJAX", () => {
   test("GET Request with Fetch", () => {
     obj.getRequest.getFetch().then((title) => {
       expect(title).toBe(
