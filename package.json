@@ -1,0 +1,22 @@
+{
+  "name": "speaking-javavscript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Chap14ExceptionHandling.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshay9677/SpeakingJavascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshay9677/SpeakingJavascript/issues"
+  },
+  "homepage": "https://github.com/akshay9677/SpeakingJavascript#readme",
+  "devDependencies": {
+    "jest": "^26.1.0"
+  }
+}
