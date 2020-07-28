@@ -1,3 +1,4 @@
+const fetch = require("node-fetch");
 var obj = {
   //-------GET REQUEST------
   getRequest: {
@@ -11,6 +12,7 @@ var obj = {
           var v = document.querySelector("h1");
           v.innerHTML = x.title;
           k.innerHTML = x.body;
+          console.log(x.body);
           return x.body;
         }
       };
@@ -24,7 +26,6 @@ var obj = {
         function (response) {
           response.json().then(function (data) {
             var k = document.querySelector("h1");
-
             k.innerHTML = data.title;
           });
         }
@@ -139,10 +140,5 @@ var obj = {
     },
   },
 };
-
-//DELETE Request alert
-function deleteAlert() {
-  obj.deleteRequest.deleteFetch().then(() => alert("Data Deleted"));
-}
 
 module.exports = obj;

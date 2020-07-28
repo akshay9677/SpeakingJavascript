@@ -1,14 +1,14 @@
-const obj = require("./App");
+const obj = require("./mocks");
 describe("Test cases for CRUD Operations using Fetch API and AJAX", () => {
   test("GET Request with Fetch", () => {
-    obj.getRequest.getFetch().then((title) => {
+    return obj.getRequest.getFetch().then((title) => {
       expect(title).toBe(
         "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"
       );
     });
   });
   test("GET Request with AJAX", () => {
-    obj.getRequest.getAjax().then((body) => {
+    return obj.getRequest.getAjax().then((body) => {
       expect(body).toBe(
         "quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit molestiae ut ut quas totam nostrum rerum est autem sunt rem eveniet architecto"
       );
@@ -21,8 +21,8 @@ describe("Test cases for CRUD Operations using Fetch API and AJAX", () => {
       userId: 1,
       id: 101,
     };
-    obj.postRequest.postFetch().then((data) => {
-      expect(data).toBe(expected);
+    return obj.postRequest.postFetch().then((data) => {
+      expect(data).toStrictEqual(expected);
     });
   });
   test("POST Request with AJAX", () => {
@@ -32,29 +32,29 @@ describe("Test cases for CRUD Operations using Fetch API and AJAX", () => {
       userId: 1,
       id: 101,
     };
-    obj.postRequest.postAjax().then((data) => {
-      expect(data).toBe(expected);
+    return obj.postRequest.postAjax().then((data) => {
+      expect(data).toStrictEqual(expected);
     });
   });
   test("PUT Request using Fetch", () => {
     var expected = { id: 1, title: "Akshay", body: "Akshay Kanann", userId: 1 };
-    obj.putRequest.putFetch().then((data) => {
-      expect(data).toBe(expected);
+    return obj.putRequest.putFetch().then((data) => {
+      expect(data).toStrictEqual(expected);
     });
   });
   test("PUT Request using AJAX", () => {
     var expected = { id: 1, title: "Akshay", body: "Akshay Kanann", userId: 1 };
-    obj.putRequest.putAjax().then((data) => {
-      expect(data).toBe(expected);
+    return obj.putRequest.putAjax().then((data) => {
+      expect(data).toStrictEqual(expected);
     });
   });
   test("DELETE Request using Fetch", () => {
-    obj.deleteRequest.deleteFetch().then((data) => {
+    return obj.deleteRequest.deleteFetch().then((data) => {
       expect(data).toBeTruthy();
     });
   });
   test("DELETE Request using AJAX", () => {
-    obj.deleteRequest.deleteAjax().then((data) => {
+    return obj.deleteRequest.deleteAjax().then((data) => {
       expect(data).toBeTruthy();
     });
   });
